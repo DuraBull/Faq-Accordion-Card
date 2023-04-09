@@ -1,0 +1,93 @@
+.container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    max-width: 900px
+    max-height: 700px
+    background-color: white
+    border-radius: 25px
+    // padding: 0 4em 3em 0
+
+.image
+    background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg")
+    background-repeat: no-repeat
+    background-position: -80px center, -80px center
+    background-size: 100%, 100%
+    padding: 2em 0
+
+.accordion
+    padding: 2em 5em 4em 0
+
+.faq
+    padding: 1em 0 .8em
+
+input
+    display: none
+
+input + label + .answer
+    height: 0
+    opacity: 0
+    font-size: 0
+    line-height: 1.2em
+
+input:checked + label
+    border: 0
+    h2
+        font-weight: $font-bold
+    img
+        transform: rotate(180deg)
+    + .answer
+        transition: ease .5s
+        opacity: 1
+        font-size: 15px
+        padding-bottom: 1em
+        height: auto
+        border-bottom: 1px solid $light-grayish-blue
+
+label
+    display: flex
+    position: relative
+    z-index: 999
+    padding: 1em 0
+    border-bottom: 1px solid $light-grayish-blue
+    &:hover
+        cursor: pointer
+        color: $soft-red
+    img
+        margin-left: auto
+        align-self: center
+        width: 10px
+        height: 7px
+
+// .question
+//     position: relative
+//     width: 350px
+//     padding: 1em 1em 1em 0
+//     border-bottom: 1px solid $light-grayish-blue
+//     &:hover
+//         cursor: pointer
+//         color: $soft-red
+//     &:active
+//         h2
+//             font-weight: $font-bold
+//         img
+//             transform: rotate(180deg)
+//         .answer
+//             display: block
+
+// .q-wrap
+//     position: relative
+//     display: flex
+//     justify-content: space-between
+//     align-items: center
+//     img
+//         width: 10px
+//         height: 7px
+
+// .answer
+//     display: none
+//     color: $dark-grayish-blue
+//     padding: .5em 0
+//     line-height: 1.2em
+
+// .display-answer
+//     display: block
