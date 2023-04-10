@@ -306,11 +306,13 @@ label img {
 @media screen and (max-width: 45em) {
   body {
     padding-top: 7em;
+    height: 100%;
   }
   .container {
     display: flex;
     flex-direction: column;
     max-width: 350px;
+    max-height: 900px;
   }
   .image {
     background: url("../images/bg-pattern-mobile.svg") no-repeat;
