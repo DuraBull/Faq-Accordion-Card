@@ -8,11 +8,19 @@
     // padding: 0 4em 3em 0
 
 .image
+    position: relative
     background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg")
     background-repeat: no-repeat
     background-position: -80px center, -80px center
     background-size: 100%, 100%
     padding: 2em 0
+.main-img
+    display: none
+.box
+    width: 35%
+    position: absolute
+    top: 43%
+    left: -23%
 
 .accordion
     padding: 2em 5em 4em 0
@@ -58,36 +66,34 @@ label
         width: 10px
         height: 7px
 
-// .question
-//     position: relative
-//     width: 350px
-//     padding: 1em 1em 1em 0
-//     border-bottom: 1px solid $light-grayish-blue
-//     &:hover
-//         cursor: pointer
-//         color: $soft-red
-//     &:active
-//         h2
-//             font-weight: $font-bold
-//         img
-//             transform: rotate(180deg)
-//         .answer
-//             display: block
+@media screen and (max-width: 45em)
+    body
+        padding-top: 7em
+    .container
+        display: flex
+        flex-direction: column
+        max-width: 350px
+    .image
+        background: url("../images/bg-pattern-mobile.svg") no-repeat
+        background-position: 50% 50%
+        height: 100px
 
-// .q-wrap
-//     position: relative
-//     display: flex
-//     justify-content: space-between
-//     align-items: center
-//     img
-//         width: 10px
-//         height: 7px
+    .main-img
+        display: block
+        position: absolute
+        top: -110px
+        left: 50px
+        width: 70%
+    .box
+        display: none
 
-// .answer
-//     display: none
-//     color: $dark-grayish-blue
-//     padding: .5em 0
-//     line-height: 1.2em
-
-// .display-answer
-//     display: block
+    .faq
+        text-align: center
+    .accordion
+        display: flex
+        flex-direction: column
+        text-align: left
+        margin: auto
+        padding: 0 2em 3em
+        p
+            padding-right: 2em
